@@ -12,7 +12,20 @@
     --shadow: 0 0 25px rgba(0, 0, 0, .5);
 }
 
-body{   background-color: var(--black); }
+
+
+body{
+    display: flex;
+    min-height: 100vh;
+    background-image: url('./background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
 
 
 
@@ -44,6 +57,7 @@ body{   background-color: var(--black); }
     backdrop-filter: blur(12px);
     box-shadow: var(--shadow);
 }
+
 
 .countdown{
     width: 95vw;
@@ -97,4 +111,25 @@ span.text{
     font-weight: 600;
     box-shadow: var(--shadow);
     border-radius: .3em;
+}
+
+
+
+
+/*     Snow Effect     */
+i{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: var(--white);
+    box-shadow: inset 0 -1px 1px rgb(114, 114, 114);
+    border-radius: 50%;
+    top: -10px;
+    animation: snoweffect 10s linear infinite;
+}
+
+
+@keyframes snoweffect {
+    0%{     top: -10px;  }
+    100%{     top: calc(100vh + 50px);  }
 }
