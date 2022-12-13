@@ -38,3 +38,38 @@ function countdown(){
 
 let i = setInterval(countdown, 1000);
 countdown();
+
+
+
+
+
+//  Snow Effect
+const body = document.querySelector('body');
+
+
+const snowEffect = () => {
+    let copo = document.createElement('i');
+    let x = innerWidth * Math.random();
+    let size = (Math.random() * 8) + 2;
+    let zIndeex = Math.round(Math.random()) * 100;   // Snow Before  TEXT AND CONTENT
+    let delay = Math.random() * 5;  //  Flake(copos) Speed
+    let animate = (Math.random() * 10) + 5;
+
+
+    copo.style.left = x + 'px';
+    copo.style.width = size + 'px';
+    copo.style.height = size + 'px';
+    copo.style.zIndex = zIndeex;
+    copo.style.animationDelay = delay + 's';
+    copo.style.animationDuration = animate + 's';
+
+    body.appendChild(copo);
+
+
+    //  Remove COPOS for a certain time
+    setTimeout(() => {
+        copo.remove();
+    }, animate * 1000);
+}
+
+setInterval(snowEffect, 70);
