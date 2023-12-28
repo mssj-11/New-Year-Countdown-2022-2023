@@ -3,7 +3,7 @@ let hour = document.getElementById('hr');
 let minutes = document.getElementById('min');
 let sec = document.getElementById('sec');
 
-let endDate = new Date(2023, 0, 1, 00, 00);
+let endDate = new Date(2024, 0, 1, 00, 00);
 let endTime = endDate.getTime();
 
 
